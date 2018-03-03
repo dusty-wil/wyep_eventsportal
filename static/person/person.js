@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  $.get('http://demo3809455.mockable.io/users/1', function(data) {
+  $.get('https://demo3809455.mockable.io/users/1', function(data) {
     buildPerson(data);
   });
 

@@ -1,0 +1,54 @@
+First user: artists
+Second user: fans of *
+
+
+Pages:
++ add artists
++ add event
++ add mentors
++ add venues
+{
+	location :: string
+	contact :: string
+	genres :: string[]
+}
+
+simplified model - artist
+{
+	name :: string
+	bio :: string
+	contact :: string
+	image :: byte[]
+	group :: relationship(group)
+}
+
+group - 
+{
+	year started :: number
+	year ended :: number
+	artists :: artist[]
+	image :: byte[]
+	albums :: {
+		name :: string
+		link :: string
+	}
+
+}
+
+venues - 
+{
+	name :: string
+	location :: string
+	image :: byte[]
+	events :: {
+		name :: string
+		date :: time
+	}
+}
+
+
++ curated section (community)
++ query by * neighborhod
+
++ If the person is a mentor, show who they worked with
++ If the person is an artist, who they worked with
