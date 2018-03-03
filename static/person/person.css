@@ -1,7 +1,3 @@
-.person__name {
-  text-align: center;
-}
-
 .person__mentor svg path{
   fill: yellow;
 }

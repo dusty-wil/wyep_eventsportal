@@ -9,6 +9,7 @@
 #  banner_image :string
 #  youtube_url  :string
 #  website_url  :string
+#  is_mentor    :boolean
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
