@@ -22,4 +22,22 @@ class Artist < ApplicationRecord
   has_many :events
   has_many :venues, :through => :events
   has_one :genre
+
+  def self.search(term)
+    result = []
+    words = term.downcase.gsub(',',' ').split(/\s+/)
+    
+    Artist.all.each do |a|
+      target = (a.name || "").strip.downcase + " " + (a.bio || "").strip.downcase + (a.type || "").strip.downcase
+      
+      words.each do |w|
+        if target.include?(w)
+          result.push(a)
+          break
+        end
+      end
+    end
+    
+    result
+  end
 end

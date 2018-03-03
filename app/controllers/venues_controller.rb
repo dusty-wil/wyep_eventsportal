@@ -16,8 +16,45 @@ class VenuesController < ApplicationController
   end
   
   def show
-    @venue = Venue.find(params[:id])
+    @venue = Venue.find_by_id(params[:id])
     
-    render :json => @venue
+    if @venue.nil?
+      head :non_found
+    else
+      render :json => @venue
+    end
+  end
+  
+  def artists
+    @venue = Venue.find_by_id(params[:id])
+
+    if @venue.nil?
+      head :non_found
+    else
+      artists = []
+      @venue.artists.order(:name).limit(10).each do |artist|
+        artists.push({:id => artist.id, :name => artist.name, :image_url => artist.image_url, 
+                      :is_mentor => artist.is_mentor, :genre_id => artist.genre_id})
+      end
+      
+      render :json => artists
+    end
+  end
+  
+  def events
+    @venue = Venue.find_by_id(params[:id])
+
+    if @venue.nil?
+      head :non_found
+    else
+      events = []
+      @venue.events.order('date DESC').limit(10).each do |e|
+        events.push({:id => e.id, :date => e.date, :title => e.title, :description => e.description, 
+                     :price_advance => e.price_advance.round(2), :price_door => e.price_door.round(2),
+                     :all_ages => e.all_ages, :artist_id => e.artist_id, :venue_id => e.venue_id})
+      end
+      
+      render :json => events
+    end    
   end
 end

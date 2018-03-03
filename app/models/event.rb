@@ -20,4 +20,22 @@
 class Event < ApplicationRecord
   belongs_to :artist
   belongs_to :venue
+  
+  def self.search(term)
+    result = []
+    words = term.downcase.gsub(',',' ').split(/\s+/)
+    
+    Event.all.each do |e|
+      target = (e.title || "").strip.downcase + " " + (e.description || "").strip.downcase
+      
+      words.each do |w|
+        if target.include?(w)
+          result.push(e)
+          break
+        end
+      end
+    end
+    
+    result
+  end
 end
