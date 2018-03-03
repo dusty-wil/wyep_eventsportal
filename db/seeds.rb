@@ -24,12 +24,12 @@ if 0 == Genre.count
  end
  
 if 0 == Artist.count
-  Artist.create!(:name => "Joe Satriani", :is_mentor => true, :genre_id => Genre.find_by_name("Rock").id)
-  Artist.create!(:name => "Metallica", :is_mentor => true, :genre_id => Genre.find_by_name("Metal").id)
-  Artist.create!(:name => "Modest Mouse", :is_mentor => false, :genre_id => Genre.find_by_name("Rock").id)
-  Artist.create!(:name => "Britney Spears", :is_mentor => false, :genre_id => Genre.find_by_name("Pop").id)
-  Artist.create!(:name => "Kenny Chesney", :is_mentor => false, :genre_id => Genre.find_by_name("Country").id)
-  Artist.create!(:name => "Donnie Iris", :is_mentor => false, :genre_id => Genre.find_by_name("Folk").id)
+  Artist.create!(:name => "Joe Satriani", :image_url => 'http://joshuamichaelmiller.com/wp-content/uploads/joesatriani.jpg', :is_mentor => true, :genre_id => Genre.find_by_name("Rock").id)
+  Artist.create!(:name => "Metallica", :image_url => 'http://www.metalsucks.net/wp-content/uploads/2017/08/metallicaheavymontreal2017.jpg', :is_mentor => true, :genre_id => Genre.find_by_name("Metal").id)
+  Artist.create!(:name => "Modest Mouse", :image_url => 'https://static.stereogum.com/uploads/2013/03/modest-608x450.jpg', :is_mentor => false, :genre_id => Genre.find_by_name("Rock").id)
+  Artist.create!(:name => "Britney Spears", :image_url => 'https://images-na.ssl-images-amazon.com/images/I/C1XxZKbHSrS._SL1000_.png', :is_mentor => false, :genre_id => Genre.find_by_name("Pop").id)
+  Artist.create!(:name => "Kenny Chesney", :image_url => 'https://specials-images.forbesimg.com/imageserve/593b268d31358e03e55a0e3d/416x416.jpg', :is_mentor => false, :genre_id => Genre.find_by_name("Country").id)
+  Artist.create!(:name => "Donnie Iris", :image_url => 'https://cps-static.rovicorp.com/3/JPG_500/MI0000/020/MI0000020999.jpg?partner=allrovi.com', :is_mentor => false, :genre_id => Genre.find_by_name("Folk").id)
 end
 
 if 0 == Event.count

@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   def index
     artists =[]
     Artist.order(:name).each do |artist|
-      artists.push({:id => artist.id, :name => artist.name, :is_mentor => artist.is_mentor, :genre_id => artist.genre_id})
+      artists.push({:id => artist.id, :name => artist.name, :image_url => artist.image_url, :is_mentor => artist.is_mentor, :genre_id => artist.genre_id})
     end
     
     render :json => artists

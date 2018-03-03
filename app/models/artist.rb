@@ -13,6 +13,7 @@
 #  updated_at   :datetime         not null
 #  is_mentor    :boolean
 #  genre_id     :integer
+#  image_url    :string
 #
 
 class Artist < ApplicationRecord
