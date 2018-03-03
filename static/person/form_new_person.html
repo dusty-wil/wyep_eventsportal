@@ -170,7 +170,7 @@
     <script src="person.js"></script>
     <script type="text/javascript">
         $("#submit-btn").click(function() {
-            alert("hi");
+            alert($("#name").val());
             $.ajax({
                 url: "https://dusty-wil.github.io/wype_eventsportal/static/person/form_new_person.html",
                 data: {
