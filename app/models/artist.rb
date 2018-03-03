@@ -15,4 +15,5 @@
 #
 
 class Artist < ApplicationRecord
+  validates_inclusion_of :is_mentor, :in => [true, false]
 end
