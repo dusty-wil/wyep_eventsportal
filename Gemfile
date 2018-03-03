@@ -16,6 +16,7 @@ gem 'uglifier', '3.2.0'#'>= 1.3.0'
 gem 'nokogiri'#, '1.6.3.1'
 gem 'mechanize'
 
+gem 'jquery-rails'#, "~> 2.3.0"
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '4.2.2'#'~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -26,6 +27,8 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'haml-rails', '1.0.0'
 gem 'annotate', '2.7.2'
+gem 'devise', '4.3.0'
+gem 'devise-async', '0.7.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
