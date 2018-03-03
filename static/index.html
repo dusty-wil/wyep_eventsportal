@@ -18,12 +18,13 @@
         <div class="navbar-brand">
             <a class="navbar-item" style="font-weight: bold;" href="../index.html"><span class="fas fa-music" style="margin-right: 10px;"></span>WYEP Events Portal</a>
         </div>
-        <div class="navbar-menu is-active">
-            <a class="navbar-item" href="../person/">Add Artist</a>
-            <a class="navbar-item" href="../venue/">Add Venue</a>
-            <a class="navbar-item" href="../genre/">View Genres</a>
-        </div>
-        <div class="navbar-end">  
+        
+        <div class="navbar-end"> 
+            <div class="navbar-menu is-active">
+                <a class="navbar-item" href="../person/">Add Artist</a>
+                <a class="navbar-item" href="../venue/">Add Venue</a>
+                <a class="navbar-item" href="../genre/">View Genres</a>
+            </div>
           <!--<div class="navbar-item">
               <div class="field has-addons">
                   <div class="control">
@@ -41,7 +42,7 @@
 
   <section class="section">
     <div class="container">
-      <h1 class="title"> WYEP Events Portal <i class="fas fa-music"></i></h1>
+      <!--<h1 class="title"> WYEP Events Portal <i class="fas fa-music"></i></h1>-->
       <form action="submit_query" method="GET">
 	<div class="columns searchbox-row">
 	  <input class="input is-11 searchbox-main" type="text" placeholder="Artist/Genre/Venue/Events">
@@ -49,6 +50,14 @@
 	</div>
       </form>
 
+        <div class="container list">
+            <ul>
+                <li>Artist</li>
+                <li>Venue</li>
+                <li>Genre</li>
+            </ul>
+        </div>
+        
     </div>
   </section>
   <script src="js/main.js"></script>
