@@ -20,7 +20,7 @@
 	.searchbox-button{
 		margin-top:10%;
 		margin-left:25%;
-		margint-right:25%;
+		margin-right:25%;
 		min-width:50%;
 	}
 }
@@ -29,8 +29,14 @@
 	color:white;
 }
 
+.list {
+    color: white;
+    padding-top: 25px;
+    text-align: center;
+}
+
 
 html {
-	background-image: url(../img/header1.jpeg);
+	background-image: url(../img/homepage-bg.jpg);
 	background-repeat:no-repeat;
 }
