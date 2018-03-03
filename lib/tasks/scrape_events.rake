@@ -6,7 +6,7 @@ namespace :db do
     agent = Mechanize.new
     source = 'Pittsburgh City Paper'
 
-    for idx in 2..84 do
+    for idx in 1..2 do
       #page = agent.get("https://www.pghcitypaper.com/pittsburgh/LocationSearch?page=#{idx}")
       url = "https://www.pghcitypaper.com/pittsburgh/LocationSearch?page=#{idx}"
       fh = open(url).read
@@ -47,7 +47,7 @@ namespace :db do
         if s =~ /\"postalcode\": \"(.*?)\"/
           zipcode = $1
         end
-        if s =~ /\"id\": (.*?)/
+        if s =~ /\"id\": (\d+)/
           src_id = $1
         end
         
