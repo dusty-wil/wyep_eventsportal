@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <section class="section">
+      <div class="container">
+        <h1 class="title">Create new profile <i class="far fa-user"></i></h1>
+
+        <div class="columns">
+          <div class="column">
+            <div class="box">
+
+              <div class="field">
+                <label class="label">Name</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-success" type="text" placeholder="Enter name">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-user"></i>
+                  </span>
+                  <span class="icon is-small is-right">
+                    <i class="fas fa-check"></i>
+                  </span>
+                </div>
+                <p class="help is-success">This username is available</p>
+              </div>
+
+              <div class="field">
+                <label class="label">Group</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="text" placeholder="Enter group or band name">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-users"></i>
+                  </span>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Bio</label>
+                <div class="control">
+                  <textarea class="textarea" placeholder="What do you want us to know about you?"></textarea>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label">Email</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                  <span class="icon is-small is-left">
+                <i class="fas fa-envelope"></i>
+              </span>
+                  <span class="icon is-small is-right">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+                </div>
+                <p class="help is-danger">This email is invalid</p>
+              </div>
+
+              <div class="field">
+                <label class="label">Genre</label>
+                <div class="control">
+                  <div class="select">
+                    <select>
+                      <option>Select one</option>
+                      <option>Blues</option>
+                      <option>Classical</option>
+                      <option>Country</option>
+                      <option>Dance &amp; Electronic</option>
+                      <option>Experimental</option>
+                      <option>Folk</option>
+                      <option>Instrumental</option>
+                      <option>Jazz</option>
+                      <option>Metal</option>
+                      <option>Pop</option>
+                      <option>Punk</option>
+                      <option>R&amp;B</option>
+                      <option>Rap &amp; Hip Hop</option>
+                      <option>Rock</option>
+                      <option>Spiritual</option>
+                      <option>Rock</option>
+                      <option>World Music</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="control">
+                  <label class="checkbox">
+                    <input type="checkbox">
+                    I am a mentor. 
+                  </label>
+                  <input class="input" type="text" placeholder="List your expertise"></input>
+                </div>
+              </div>
+
+              <div class="field is-grouped">
+                <div class="control">
+                  <button class="button is-link">Submit</button>
+                </div>
+                <div class="control">
+                  <button class="button is-text">Cancel</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <script src="js/main.js"></script>
+  </body>
+
+</html>
