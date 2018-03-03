@@ -13,7 +13,11 @@
 #  all_ages      :boolean
 #  created_at    :datetime         not null
 #  updated_at    :datetime         not null
+#  artist_id     :integer
+#  venue_id      :integer
 #
 
 class Event < ApplicationRecord
+  belongs_to :artist
+  belongs_to :venue
 end
