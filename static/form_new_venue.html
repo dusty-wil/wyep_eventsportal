@@ -14,7 +14,7 @@
   <body>
     <section class="section">
       <div class="container">
-        <h1 class="title">Create new profile <i class="far fa-user"></i></h1>
+        <h1 class="title">Add new venue <i class="far fa-user"></i></h1>
 
         <div class="columns">
           <div class="column">
@@ -23,7 +23,7 @@
               <div class="field">
                 <label class="label">Name</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-success" type="text" placeholder="Enter name">
+                  <input class="input is-danger" type="text" placeholder="Enter name">
                   <span class="icon is-small is-left">
                     <i class="fas fa-user"></i>
                   </span>
@@ -31,23 +31,35 @@
                     <i class="fas fa-check"></i>
                   </span>
                 </div>
-                <p class="help is-success">This username is available</p>
+                <p class="help is-danger">This venue exists already! </p>
               </div>
 
               <div class="field">
-                <label class="label">Group</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input" type="text" placeholder="Enter group or band name">
-                  <span class="icon is-small is-left">
-                    <i class="fas fa-users"></i>
-                  </span>
+                <div class="file is-info has-name">
+                  <label class="file-label">
+                    <input class="file-input" type="file" name="resume">
+                    <span class="file-cta">
+                      <span class="file-icon">
+                        <i class="fas fa-upload"></i>
+                      </span>
+                      <span class="file-label">
+                        Upload profile picture
+                      </span>
+                    </span>
+                    <span class="file-name">
+                      venue.jpg
+                    </span>
+                  </label>
                 </div>
               </div>
 
               <div class="field">
-                <label class="label">Bio</label>
-                <div class="control">
-                  <textarea class="textarea" placeholder="What do you want us to know about you?"></textarea>
+                <label class="label">Address</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="text" placeholder="Enter address">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-map-marker"></i>
+                  </span>
                 </div>
               </div>
 
@@ -66,40 +78,19 @@
               </div>
 
               <div class="field">
-                <label class="label">Genre</label>
-                <div class="control">
-                  <div class="select">
-                    <select>
-                      <option>Select one</option>
-                      <option>Blues</option>
-                      <option>Classical</option>
-                      <option>Country</option>
-                      <option>Dance &amp; Electronic</option>
-                      <option>Experimental</option>
-                      <option>Folk</option>
-                      <option>Instrumental</option>
-                      <option>Jazz</option>
-                      <option>Metal</option>
-                      <option>Pop</option>
-                      <option>Punk</option>
-                      <option>R&amp;B</option>
-                      <option>Rap &amp; Hip Hop</option>
-                      <option>Rock</option>
-                      <option>Spiritual</option>
-                      <option>Rock</option>
-                      <option>World Music</option>
-                    </select>
-                  </div>
+                <label class="label">Website</label>
+                <div class="control has-icons-left has-icons-right">
+                  <input class="input" type="email" placeholder="yourwebsite.com">
+                  <span class="icon is-small is-left">
+                    <i class="fas fa-link"></i>
+                  </span>
                 </div>
               </div>
 
               <div class="field">
+                <label class="label">Additional Info</label>
                 <div class="control">
-                  <label class="checkbox">
-                    <input type="checkbox">
-                    I am a mentor. 
-                  </label>
-                  <input class="input" type="text" placeholder="List your expertise"></input>
+                  <textarea class="textarea" placeholder="What do you want us to know about you?"></textarea>
                 </div>
               </div>
 
