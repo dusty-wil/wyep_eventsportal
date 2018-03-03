@@ -23,4 +23,25 @@
 #
 
 class Venue < ApplicationRecord
+  has_many :events
+  has_many :artists, :through => :events
+
+  def self.search(term)
+    result = []
+    words = term.downcase.gsub(',',' ').split(/\s+/)
+    
+    Venue.all.each do |v|
+      target = (v.name || "").strip.downcase + " " + (v.bio || "").strip.downcase + (v.neighborhood || "").strip.downcase +
+      (v.address_1 || "").strip.downcase + (v.category || "").strip.downcase
+      
+      words.each do |w|
+        if target.include?(w)
+          result.push(v)
+          break
+        end
+      end
+    end
+    
+    result
+  end
 end

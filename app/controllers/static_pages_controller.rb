@@ -1,5 +1,18 @@
 class StaticPagesController < ApplicationController
-  def home
+  respond_to :json, :html
+  
+  def home   
+  end
+  
+  def search
+    term = params[:terms]
     
+    results = {:artists => Artist.search(term),
+               :events => Event.search(term),
+               :venues => Venue.search(term)}
+    respond_to do |format|
+      format.html
+      format.json { render :json => results }
+    end
   end
 end
