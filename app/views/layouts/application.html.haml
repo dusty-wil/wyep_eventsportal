@@ -1,0 +1,17 @@
+!!! 5
+%head
+  %title= content_for?(:title) ? yield(:title) : "WYEP Hackathon"
+  %meta{ :charset => "utf-8" }
+  %meta{ :name => "viewport", :content => "width=device-width, initial-scale=1.0" }  
+  = stylesheet_link_tag    'application', media: 'all', "data-turbolinks-track" => true
+  -#= javascript_include_tag "vendor/modernizr"
+  = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.css"
+  = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.css"
+  = csrf_meta_tag
+  = render 'layouts/application/shim'
+%body
+  = render 'layouts/application/header'
+  .main
+    = yield
+  = render 'layouts/application/footer'
+  = javascript_include_tag 'application', "data-turbolinks-track" => true

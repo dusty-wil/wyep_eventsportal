@@ -9,9 +9,11 @@
 #  banner_image :string
 #  youtube_url  :string
 #  website_url  :string
+#  is_mentor    :boolean
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
 #
 
 class Artist < ApplicationRecord
+  validates_inclusion_of :is_mentor, :in => [true, false]
 end

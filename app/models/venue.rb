@@ -14,6 +14,12 @@
 #  longitude    :decimal(, )
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
+#  city         :string
+#  state        :string
+#  category     :string
+#  url          :string
+#  source       :string
+#  src_id       :string
 #
 
 class Venue < ApplicationRecord

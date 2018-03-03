@@ -1,0 +1,21 @@
+- provide(:title, t('open_positions'))
+.container
+  .row
+    .span12
+      .content-block
+        .bd
+          .center
+            = will_paginate
+            = page_entries_info
+          %table.table.zebra-striped
+            %tr
+              %th Name
+              %th Neighborhood
+              %th Category
+              %th Site
+            - @venues.each do |v|
+              %tr
+                %td= v.name
+                %td= v.neighborhood
+                %td= v.category
+                %td= link_to 'Info', v.url, :target => "_blank"
