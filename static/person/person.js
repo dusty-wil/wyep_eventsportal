@@ -4,6 +4,17 @@ $(document).ready(function() {
     buildPerson(data);
   });
 
+  $('.person__is-mentor').click(function() {
+    $('.person__is-mentor + input').toggle($(this).find(':checked').length > 0);
+  });
+
+  $('.person__email').blur(function(e) {
+    var isValid = /.+\@.+\..+/.test($(this).val());
+
+    $('.person__email--invalid, .person__email--msg').toggle(!isValid);
+    $('.person__email--valid').toggle(isValid);
+  })
+
 });
 
 function buildPerson(data) {
