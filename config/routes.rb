@@ -9,7 +9,10 @@ Rails.application.routes.draw do
     end
   end
   
-  resources :genres, :only => [:index]
+  resources :genres, :only => [:index] do
+    put 'search', :on => :member
+  end
+  
   resources :artists, :only => [:index, :show, :create]
   resources :events, :only => [:index, :show]
   

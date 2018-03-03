@@ -2,10 +2,12 @@ class StaticPagesController < ApplicationController
   respond_to :json, :html
   
   def home   
+    render :layout => false
   end
   
   def search
-    term = params[:terms]
+    puts params
+    term = params
     
     results = {:artists => Artist.search(term),
                :events => Event.search(term),

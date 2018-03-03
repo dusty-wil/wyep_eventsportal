@@ -27,11 +27,11 @@ class VenuesController < ApplicationController
   
   def artists
     @venue = Venue.find_by_id(params[:id])
+    artists = []
 
     if @venue.nil?
       head :non_found
     else
-      artists = []
       @venue.artists.order(:name).limit(10).each do |artist|
         artists.push({:id => artist.id, :name => artist.name, :image_url => artist.image_url, 
                       :is_mentor => artist.is_mentor, :genre_id => artist.genre_id})
@@ -43,11 +43,11 @@ class VenuesController < ApplicationController
   
   def events
     @venue = Venue.find_by_id(params[:id])
+    events = []
 
     if @venue.nil?
       head :non_found
     else
-      events = []
       @venue.events.order('date DESC').limit(10).each do |e|
         events.push({:id => e.id, :date => e.date, :title => e.title, :description => e.description, 
                      :price_advance => e.price_advance.round(2), :price_door => e.price_door.round(2),

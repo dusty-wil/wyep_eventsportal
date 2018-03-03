@@ -1,0 +1,42 @@
+@media (orientation: landscape){
+	.searchbox-row{
+		max-width:70%;
+		margin-top:20%;
+		margin-left:15%;
+		margin-right:15%;
+	}
+	html{
+		background-size:cover;
+	}
+}
+
+@media screen and (orientation: portrait) {
+	.searchbox-row{
+		margin-top:40%;
+	}
+	.searchbox-main{
+		
+	}
+	.searchbox-button{
+		margin-top:10%;
+		margin-left:25%;
+		margin-right:25%;
+		min-width:50%;
+	}
+}
+
+.title{
+	color:white;
+}
+
+.list {
+    color: white;
+    padding-top: 25px;
+    text-align: center;
+}
+
+
+html {
+	background-image: url('homepage-bg.jpg');
+	background-repeat:no-repeat;
+}
