@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Create Profile</title>
+    <title>Create Event</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
     <link rel="stylesheet" href="css/main.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
@@ -14,7 +14,7 @@
   <body>
     <section class="section">
       <div class="container">
-        <h1 class="title">Add new venue <i class="far fa-building"></i></h1>
+        <h1 class="title">Add new event <i class="far fa-calendar-alt"></i></h1>
 
         <div class="columns">
           <div class="column">
@@ -23,14 +23,15 @@
               <div class="field">
                 <label class="label">Name</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="text" placeholder="Enter name">
+                  <input class="input is-danger" type="text" placeholder="Enter event name">
                   <span class="icon is-small is-left">
-                    <i class="fas fa-building"></i>
+                    <i class="fas fa-calendar-alt"></i>
                   </span>
                   <span class="icon is-small is-right">
                     <i class="fas fa-check"></i>
                   </span>
                 </div>
+                <p class="help is-danger">This venue exists already! </p>
               </div>
 
               <div class="field">
@@ -42,11 +43,11 @@
                         <i class="fas fa-upload"></i>
                       </span>
                       <span class="file-label">
-                        Upload profile picture
+                        Upload event poster
                       </span>
                     </span>
                     <span class="file-name">
-                      venue.jpg
+                      poster.jpg
                     </span>
                   </label>
                 </div>
@@ -65,33 +66,44 @@
               <div class="field">
                 <label class="label">Website</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input" type="text" placeholder="yourwebsite.com">
+                  <input class="input" type="email" placeholder="yourwebsite.com">
                   <span class="icon is-small is-left">
                     <i class="fas fa-link"></i>
                   </span>
                 </div>
               </div>
 
-              
+              <div class="field">
+                <label class="label">Event time</label>
+                <div class="columns">               
+                    <div class="column">
+                      <input class="input" type="date" name="date" placeholder="Date">
+                    </div>
+                    <div class="column">
+                      <input class="input column" type="time" name="time" placeholder="time">
+                    </div>
+                    <div class="column">
+                      <input class="input column" type="text" name="price" placeholder="Ticket price">
+                    </div>
+                </div>
+              </div>
 
               <div class="field">
-                <label class="label">Email</label>
-                <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="email" placeholder="Enter venue's email address">
-                  <span class="icon is-small is-left">
-                   <i class="fas fa-envelope"></i>
-                  </span>
-                  <span class="icon is-small is-right">
-                    <i class="fas fa-exclamation-triangle"></i>
-                  </span>
-                </div>
-                <p class="help is-danger">This email is invalid</p>
+                <label class="label">Set list</label>
+                  <div class="columns">
+                    <div class="column">
+                      <input class="input" type="text" name="band" placeholder="Band name">
+                    </div>
+                    <div class="control column">
+                      <button class="button is-info">Add</button>
+                    </div>
+                </div>  
               </div>
 
               <div class="field">
                 <label class="label">Additional Info</label>
                 <div class="control">
-                  <textarea class="textarea" placeholder="What do you want us to know about you?"></textarea>
+                  <textarea class="textarea" placeholder="What else do we know? - parking, childcare, etc. "></textarea>
                 </div>
               </div>
 
