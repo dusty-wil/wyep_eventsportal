@@ -12,16 +12,23 @@
 
 @media screen and (orientation: portrait) {
 	.searchbox-row{
-		max-width:100%;
+		margin-top:40%;
 	}
 	.searchbox-main{
-		max-width:90%;
+		
+	}
+	.searchbox-button{
+		margin-top:10%;
+		margin-left:25%;
+		margint-right:25%;
+		min-width:50%;
 	}
 }
 
 .title{
 	color:white;
 }
+
 
 html {
 	background-image: url(../img/header1.jpeg);
