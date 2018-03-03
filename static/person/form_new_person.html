@@ -168,6 +168,21 @@
     </section>
     <script src="../js/main.js"></script>
     <script src="person.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() { 
+
+            $.ajax({
+                url: "http://wyep.herokuapp.com/genres",
+                dataType: 'jsonp',
+                success: function(data) {
+                    
+                
+                },
+                type: 'GET'
+            });
+
+        });
+    </script>
   </body>
 
 </html>
