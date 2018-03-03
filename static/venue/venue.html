@@ -15,9 +15,26 @@
   <body onload="main();">
   <section class="section">
     <div class="container">
-      <h1 class="title"> WYEP Events : Venue : <span id="venuname"></span></h1>
+      <h1 class="title"> WYEP Events : Venue : <span id="venuename"></span></h1>
       <hr/>
+      <div class="tile is-ancestor">
+	      <div class="tile is-4 is-vertical is-parent">
+		      <div class="tile is-child box">
+			      <img src="" id="venueimage">
+		      </div>
+		      <div class="tile is-child box">
+			      <span id="venueloc">map?</span>
+		      </div>
+	      </div>
+	      <div class="tile is-parent">
+		      <div class="tile is-child box">
+			      <span id="venueinfo">info</span>
+		      </div>
+	      </div>
+      </div>
+
       <h3 class="title"> Artists that have played here</h3>
+
       <div class="venue-artists" id="venue-artists">
       
       </div>
