@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Create Profile</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="person.css">
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   </head>
@@ -35,24 +36,23 @@
               </div>
 
               <div class="field">
-                <div class="file is-info has-name">
-                  <label class="file-label">
-                    <input class="file-input" type="file" name="resume">
-                    <span class="file-cta">
-                      <span class="file-icon">
-                        <i class="fas fa-upload"></i>
+                  <div class="file is-info has-name">
+                    <label class="file-label">
+                      <input class="file-input" type="file" name="resume">
+                      <span class="file-cta">
+                        <span class="file-icon">
+                          <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label">
+                          Upload profile picture
+                        </span>
                       </span>
-                      <span class="file-label">
-                        Upload profile picture
+                      <span class="file-name">
+                        person.jpg
                       </span>
-                    </span>
-                    <span class="file-name">
-                      person.jpg
-                    </span>
-                  </label>
+                    </label>
+                  </div>
                 </div>
-              </div>
-
 
               <div class="field">
                 <label class="label">Group</label>
@@ -74,15 +74,18 @@
               <div class="field">
                 <label class="label">Email</label>
                 <div class="control has-icons-left has-icons-right">
-                  <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                  <input class="input is-danger person__email" type="email" placeholder="Email input">
                   <span class="icon is-small is-left">
-                <i class="fas fa-envelope"></i>
-              </span>
-                  <span class="icon is-small is-right">
-                <i class="fas fa-exclamation-triangle"></i>
-              </span>
+                    <i class="fas fa-envelope"></i>
+                  </span>
+                  <span class="icon is-small is-right person__email--invalid">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </span>
+                  <span class="icon is-small is-right person__email--valid">
+                    <i class="fas fa-check"></i>
+                  </span>
                 </div>
-                <p class="help is-danger">This email is invalid</p>
+                <p class="help is-danger person__email--msg">This email is invalid</p>
               </div>
 
               <div class="field">
@@ -115,7 +118,7 @@
 
               <div class="field">
                 <div class="control">
-                  <label class="checkbox">
+                  <label class="checkbox person__is-mentor">
                     <input type="checkbox">
                     I am a mentor. 
                   </label>
@@ -137,7 +140,8 @@
         </div>
       </div>
     </section>
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
+    <script src="person.js"></script>
   </body>
 
 </html>

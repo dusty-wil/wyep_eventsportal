@@ -1,3 +1,11 @@
 .person__mentor svg path{
   fill: yellow;
 }
+
+.person__is-mentor + input {
+  display: none;
+}
+
+.person__email--invalid, .person__email--valid {
+  display: none;
+}
