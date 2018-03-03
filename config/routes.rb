@@ -2,8 +2,11 @@ Rails.application.routes.draw do
   devise_for :users
   root :to => "static_pages#home"
   
-  resources :venues, :only => [:index]
-
+  resources :venues, :only => [:index, :show]
+  resources :genres, :only => [:index]
+  resources :artists, :only => [:index, :show, :create]
+  resources :events, :only => [:index, :show]
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
